@@ -1,0 +1,29 @@
+l=[]
+n=int(input("Enter no.of employees:"))
+for i in range(n):
+    print("Employees",i+1)
+    id=input("Id:")
+    name=input("Name:")
+    s=int(input("Salary:"))
+    l.append((id,name,s))
+employees=tuple(l)
+print("Id\tName\tSalary")
+for i in employees:
+     print(i[0],i[1],i[2])
+s=input("Enter the employee id to be searched:")
+for i in employees:
+    if i[0]==s:
+        print("Id:",i[0],"\nName:",i[1],"\nSalary",i[2])
+        break
+    else:
+        print("Employee not found")
+m=employees[0]
+for i in employees:
+      if i[2]>m[2]:
+         m=i
+print("Employee with high salary")
+print("Id:",m[0],"\nName:",m[1],"\nSalary",m[2])
+print("Employee with details whose salary os above 50000")
+for i in employees:
+            if i[2]>500000:
+                print("Id:",i[0],"\nName:",i[1],"\nSalary",i[2])

@@ -1,0 +1,11 @@
+contacts={}
+n=int(input("Enter no. of persons:"))
+for i in range(n):
+    number=int(input("Enter mobile no.:"))
+    name=input("Enter name:")
+    contacts[number]=name
+search=int(input("Enter mobile no. to be searched:"))
+if search in contacts:
+        print("Person name:",contacts[search])
+else:
+        print("Not found")

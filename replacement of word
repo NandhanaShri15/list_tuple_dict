@@ -1,0 +1,12 @@
+dictionary={}
+n=input("Enter a sentence:").split()
+dictionary["apple"]="mango"
+dictionary["coffe"]="tea"
+dictionary["office"]="home"
+dictionary["hand"]="face"
+for i in n:
+    if i in dictionary:
+        i=dictionary[i]
+        print(i,end=" ")
+    else:
+        print(i,end=" ")

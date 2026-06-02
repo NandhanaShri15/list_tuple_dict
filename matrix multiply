@@ -1,0 +1,20 @@
+a=[]
+b=[]
+r1,c1=map(int,input("Enter no. of rows and columns of 1st matrix:").split())
+r2,c2=map(int,input("Enter no. of rows and columns of 2nd matrix:").split())
+if c1!=r2:
+    print("Matrix multiplication not possible")
+else:
+    print("Matrix 1")
+    for i in range(r1):
+        a.append(list(map(int,input("Rows %i elements:"%(i+1)).split())))
+    print("Matrix 2")
+    for j in range(r2):
+        b.append(list(map(int,input("Rows %i elements:"%(i+1)).split())))
+    r=[[0]*c2 for i in range(r1)]
+    for i in range(r1):
+        for j in range(c2):
+            for k in range(c1):
+                        r[i][j]+=a[i][k]*b[k][j]
+    for i in r:
+            print(i)
